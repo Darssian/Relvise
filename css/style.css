@@ -628,13 +628,16 @@ body {
 .whoweare-body {
 	margin-top: 100px;
 
-	display: flex;
+	display:flex;
+	align-items: flex-start;
 	justify-content: space-between;
 }
 
 .whoweare_video {
+	flex: 0 0 57%;
 	position: relative;
-	width: 57%;
+	padding: 0px 0px 42.25% 0px;
+
 }
 
 .whoweare_video iframe {
@@ -643,10 +646,14 @@ body {
 	left: 0;
 	width: 100%;
 	height: 100%;
+
+	object-fit: cover;
+
 }
 
 .whoweare_content {
-	max-width: 333px;
+	flex: 1 1 auto;
+	padding: 20px 0px 0px 121px;
 }
 
 .whoweare_title {
@@ -714,9 +721,48 @@ body {
 		/* Отключаем повторение */
 		width: 32px;
 		/* Устанавливаем необходимую ширину */
-		height: 32px;
+		heights ight: 32px;
 		/* Устанавливаем необходимую высоту */
 		margin-right: 20px;
 		/* Расстояние до текста или других элементов */
 		vertical-align: middle;
 	}
+
+@media (max-width: 1080px) {
+	.whoweare_content {
+		padding: 0px 0px 0px 50px;
+	}
+}
+@media (max-width: 950px) {
+
+	.whoweare {
+		padding: 50px 0px 50px 0px;
+	}
+	.whoweare_body {
+		flex-direction: column;
+		align-items: stretch;
+	}
+	.whoweare_title {
+	    font-size: 24px;
+												}
+																					.whoweare_content {
+																							padding: 0px 0px 0px 0px;
+																								}
+																									.whoweare_video {
+																											padding: 0px 0px 56.25% 0px;
+																												}
+																													.whoweare_video:not(:last-child) {
+																															margin: 50px 0px 0px 0px;
+																																}
+																																	.whoweare_header {
+																																			margin: 0px 0px 30px 0px;
+																																				}
+																																				}
+																																				@media (max-width: 767px) {
+																																					.whoweare {
+																																							padding: 20px 0px 50px 0px;
+
+																																													.whoweare_video:not(:last-child) {
+																																															margin: 30px 0px 0px 0px;
+																																																}
+																																																}}
